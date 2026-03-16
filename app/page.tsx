@@ -522,21 +522,21 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ─── SOCIAL PROOF / TIERS ─── */}
+        {/* ─── FITNESS TIERS ─── */}
         <section className="py-32 px-6 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/[0.02] to-transparent pointer-events-none" />
           <div className="max-w-4xl mx-auto relative z-10 text-center">
             <ScrollReveal>
               <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                Tier{" "}
+                Compete at{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
-                  System
+                  your level
                 </span>
               </h2>
             </ScrollReveal>
             <ScrollReveal custom={1}>
               <p className="text-zinc-400 text-lg max-w-2xl mx-auto mb-16">
-                Fair play enforced. Compete against people at your level.
+                Podium syncs with Apple Health to automatically place you in the right tier based on your real fitness data. No manual input. No guessing.
               </p>
             </ScrollReveal>
 
@@ -545,27 +545,13 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-4"
             >
               {[
-                {
-                  tier: "Bronze",
-                  range: "0 - 2 wins",
-                  color: "from-amber-700 to-amber-900",
-                  border: "border-amber-700/30",
-                },
-                {
-                  tier: "Silver",
-                  range: "3 - 9 wins",
-                  color: "from-zinc-400 to-zinc-600",
-                  border: "border-zinc-400/30",
-                },
-                {
-                  tier: "Gold",
-                  range: "10+ wins",
-                  color: "from-yellow-400 to-amber-500",
-                  border: "border-yellow-500/30",
-                },
+                { tier: "Beginner", emoji: "🟢", desc: "Under 3,000 steps/day", borderColor: "border-green-500/30" },
+                { tier: "Active",   emoji: "🔵", desc: "3,000–7,000 steps/day", borderColor: "border-blue-500/30" },
+                { tier: "Athlete",  emoji: "🟡", desc: "7,000–12,000 steps/day", borderColor: "border-yellow-500/30" },
+                { tier: "Elite",    emoji: "🔴", desc: "12,000+ steps/day", borderColor: "border-red-500/30" },
               ].map((t, i) => (
                 <motion.div
                   key={t.tier}
@@ -577,25 +563,22 @@ export default function Home() {
                 >
                   <motion.div
                     variants={cardHover}
-                    className={`p-8 rounded-2xl bg-white/[0.03] border ${t.border} backdrop-blur-sm`}
+                    className={"p-6 rounded-2xl bg-white/[0.03] border backdrop-blur-sm " + t.borderColor}
                   >
-                    <div
-                      className={`w-16 h-16 rounded-full mx-auto mb-4 bg-gradient-to-br ${t.color} flex items-center justify-center`}
-                    >
-                      <span className="text-2xl font-bold text-white/80">
-                        {t.tier[0]}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold mb-1">{t.tier}</h3>
-                    <p className="text-zinc-400 text-sm">{t.range}</p>
+                    <div className="text-4xl mb-3">{t.emoji}</div>
+                    <h3 className="text-lg font-bold mb-1">{t.tier}</h3>
+                    <p className="text-zinc-500 text-xs">{t.desc}</p>
                   </motion.div>
                 </motion.div>
               ))}
             </motion.div>
+            <ScrollReveal custom={4}>
+              <p className="text-zinc-600 text-sm mt-8">Tiers are calculated automatically from your Apple Health history. Creators can optionally lock competitions to their tier only.</p>
+            </ScrollReveal>
           </div>
         </section>
 
-        {/* ─── FINAL CTA ─── */}
+                {/* ─── FINAL CTA ─── */}
         <section className="py-32 px-6 relative">
           <div className="max-w-3xl mx-auto text-center relative z-10">
             <ScrollReveal>
