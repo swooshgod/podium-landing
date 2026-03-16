@@ -26,7 +26,7 @@ const fadeIn: Variants = {
   hidden: { opacity: 0 },
   visible: (i: number = 0) => ({
     opacity: 1,
-    transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" },
+    transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" as const },
   }),
 };
 
@@ -47,7 +47,7 @@ const cardHover = {
   hover: {
     y: -8,
     boxShadow: "0 20px 60px rgba(249,115,22,0.25)",
-    transition: { duration: 0.3, ease: "easeOut" },
+    transition: { duration: 0.3, ease: "easeOut" as const },
   },
 };
 
@@ -274,7 +274,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut" as const }}
         className="min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden"
       >
         {/* ─── HERO SECTION ─── */}
@@ -337,7 +337,7 @@ export default function Home() {
             <motion.p
               initial={{ opacity: 0 }}
               animate={heroInView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.6, delay: 1.6, ease: "easeOut" }}
+              transition={{ duration: 0.6, delay: 1.6, ease: "easeOut" as const }}
               className="text-lg md:text-xl text-zinc-400 max-w-2xl mb-10"
             >
               Create challenges, stake your entry fee, and compete against friends.
@@ -651,4 +651,3 @@ export default function Home() {
     </AnimatePresence>
   );
 }
-<!-- deploy Mon Mar 16 08:38:02 PM UTC 2026 -->
