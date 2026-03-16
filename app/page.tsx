@@ -548,10 +548,10 @@ export default function Home() {
               className="grid grid-cols-2 sm:grid-cols-4 gap-4"
             >
               {[
-                { tier: "Beginner", emoji: "🟢", desc: "Under 3,000 steps/day", borderColor: "border-green-500/30" },
-                { tier: "Active",   emoji: "🔵", desc: "3,000–7,000 steps/day", borderColor: "border-blue-500/30" },
-                { tier: "Athlete",  emoji: "🟡", desc: "7,000–12,000 steps/day", borderColor: "border-yellow-500/30" },
-                { tier: "Elite",    emoji: "🔴", desc: "12,000+ steps/day", borderColor: "border-red-500/30" },
+                { tier: "Beginner", emoji: "🟢", desc: "Building a fitness habit", borderColor: "border-green-500/30" },
+                { tier: "Active",   emoji: "🔵", desc: "Regularly moving & exercising", borderColor: "border-blue-500/30" },
+                { tier: "Athlete",  emoji: "🟡", desc: "Seriously active, consistent workouts", borderColor: "border-yellow-500/30" },
+                { tier: "Elite",    emoji: "🔴", desc: "Peak performance, daily training", borderColor: "border-red-500/30" },
               ].map((t, i) => (
                 <motion.div
                   key={t.tier}
