@@ -160,7 +160,7 @@ function StatCounter({
       custom={delay}
       className="text-center"
     >
-      <div className="text-5xl md:text-6xl font-bold text-orange-500 tabular-nums">
+      <div className="text-5xl md:text-6xl font-bold text-blue-500 tabular-nums">
         {prefix}
         {count.toLocaleString()}
         {suffix}
@@ -177,7 +177,7 @@ function StatCounter({
 function FloatingOrbs() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="floating-orb absolute top-[15%] left-[10%] w-64 h-64 rounded-full bg-orange-500/[0.04] blur-3xl" />
+      <div className="floating-orb absolute top-[15%] left-[10%] w-64 h-64 rounded-full bg-blue-500/[0.04] blur-3xl" />
       <div className="floating-orb-2 absolute top-[60%] right-[10%] w-80 h-80 rounded-full bg-red-500/[0.04] blur-3xl" />
       <div className="floating-orb-3 absolute top-[40%] left-[60%] w-48 h-48 rounded-full bg-orange-600/[0.05] blur-3xl" />
       <div className="floating-orb-4 absolute bottom-[20%] left-[30%] w-56 h-56 rounded-full bg-amber-500/[0.03] blur-3xl" />
@@ -242,7 +242,7 @@ const howItWorks = [
 function StepNumber({ number, inView }: { number: number; inView: boolean }) {
   const count = useCountUp(number, 800, inView);
   return (
-    <span className="text-5xl font-black text-orange-500/20 tabular-nums">
+    <span className="text-5xl font-black text-blue-500/20 tabular-nums">
       {String(count).padStart(2, "0")}
     </span>
   );
@@ -292,7 +292,7 @@ export default function Home() {
               transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
               className="mb-6"
             >
-              <span className="text-sm tracking-[0.4em] uppercase text-orange-500 font-semibold">
+              <span className="text-sm tracking-[0.4em] uppercase text-blue-500 font-semibold">
                 Podium
               </span>
             </motion.div>
@@ -305,7 +305,7 @@ export default function Home() {
               className="mb-10"
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.06] border border-white/[0.08] text-sm text-zinc-400 backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
                 Coming to the App Store
               </span>
             </motion.div>
@@ -324,7 +324,7 @@ export default function Home() {
                   }}
                   className={`inline-block mr-[0.3em] ${
                     word === "real" || word === "money"
-                      ? "text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500"
+                      ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600"
                       : ""
                   }`}
                 >
@@ -356,7 +356,7 @@ export default function Home() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="flex-1 text-center py-3 px-6 rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-400"
+                  className="flex-1 text-center py-3 px-6 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400"
                 >
                   You&apos;re on the list. We&apos;ll be in touch.
                 </motion.div>
@@ -368,11 +368,11 @@ export default function Home() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                     required
-                    className="flex-1 px-5 py-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all"
+                    className="flex-1 px-5 py-3 rounded-xl bg-white/[0.06] border border-white/[0.1] text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
                   />
                   <button
                     type="submit"
-                    className="px-7 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold hover:from-orange-400 hover:to-red-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.3)] cursor-pointer"
+                    className="px-7 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold hover:from-blue-400 hover:to-red-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.3)] cursor-pointer"
                   >
                     Get Early Access
                   </button>
@@ -404,7 +404,7 @@ export default function Home() {
             <ScrollReveal>
               <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
                 Choose Your{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                   Battle
                 </span>
               </h2>
@@ -434,7 +434,7 @@ export default function Home() {
                 >
                   <motion.div
                     variants={cardHover}
-                    className="h-full p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm transition-colors hover:border-orange-500/20"
+                    className="h-full p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm transition-colors hover:border-blue-500/20"
                   >
                     <div className="text-4xl mb-4">{comp.icon}</div>
                     <h3 className="text-xl font-semibold mb-2 text-white">
@@ -452,12 +452,12 @@ export default function Home() {
 
         {/* ─── HOW IT WORKS ─── */}
         <section className="py-32 px-6 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/[0.02] to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/[0.02] to-transparent pointer-events-none" />
           <div className="max-w-4xl mx-auto relative z-10">
             <ScrollReveal>
               <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
                 How It{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                   Works
                 </span>
               </h2>
@@ -507,7 +507,7 @@ export default function Home() {
             <ScrollReveal>
               <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
                 Built for{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                   Results
                 </span>
               </h2>
@@ -524,12 +524,12 @@ export default function Home() {
 
         {/* ─── FITNESS TIERS ─── */}
         <section className="py-32 px-6 relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-500/[0.02] to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/[0.02] to-transparent pointer-events-none" />
           <div className="max-w-4xl mx-auto relative z-10 text-center">
             <ScrollReveal>
               <h2 className="text-3xl md:text-5xl font-bold mb-4">
                 Compete at{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                   your level
                 </span>
               </h2>
@@ -584,7 +584,7 @@ export default function Home() {
             <ScrollReveal>
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
                 Ready to Put Your{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                   Money
                 </span>{" "}
                 Where Your Mouth Is?
@@ -598,7 +598,7 @@ export default function Home() {
             <ScrollReveal custom={2}>
               <a
                 href="#"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold text-lg hover:from-orange-400 hover:to-red-400 transition-all duration-300 hover:shadow-[0_0_40px_rgba(249,115,22,0.3)]"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-lg hover:from-blue-400 hover:to-red-400 transition-all duration-300 hover:shadow-[0_0_40px_rgba(249,115,22,0.3)]"
               >
                 Get Early Access
                 <svg
@@ -622,7 +622,7 @@ export default function Home() {
         {/* ─── FOOTER ─── */}
         <footer className="py-12 px-6 border-t border-white/[0.06]">
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <span className="text-sm tracking-[0.3em] uppercase text-orange-500 font-semibold">
+            <span className="text-sm tracking-[0.3em] uppercase text-blue-500 font-semibold">
               Podium
             </span>
             <p className="text-zinc-500 text-sm">
