@@ -81,3 +81,15 @@ body {
   animation: float-orb 22s ease-in-out infinite reverse;
   animation-delay: -10s;
 }
+
+.orb1 {
+  animation: float-orb 22s ease-in-out infinite;
+}
+.orb2 {
+  animation: float-orb 28s ease-in-out infinite reverse;
+  animation-delay: -8s;
+}
+.orb3 {
+  animation: float-orb 18s ease-in-out infinite;
+  animation-delay: -4s;
+}
